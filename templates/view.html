@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="card">
+    <h2>{{ date }}</h2>
+
+    <div class="content">
+        {{ content if content else "Chưa có nội dung" }}
+    </div>
+
+    <div class="nav">
+        <a href="/view?date={{ prev_day }}">← Ngày trước</a>
+        {% if next_day %}
+        <a href="/view?date={{ next_day }}">Ngày sau →</a>
+        {% endif %}
+    </div>
+
+    <a class="edit-btn" href="/edit?date={{ date }}">✏️ Chỉnh sửa</a>
+</div>
+</body>
+</html>

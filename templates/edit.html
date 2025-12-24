@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="card">
+    <h2>Chỉnh sửa {{ date }}</h2>
+
+    <form method="POST" action="/save">
+        <input type="hidden" name="date" value="{{ date }}">
+        <textarea name="content">{{ content }}</textarea>
+        <button>Lưu</button>
+    </form>
+
+    <a href="/view?date={{ date }}">← Quay lại đọc</a>
+</div>
+</body>
+</html>
